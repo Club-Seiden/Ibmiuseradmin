@@ -1,5 +1,11 @@
 {
-  "name" : "Ibmiuseradmin",
+  "name" : "Theiforums/Ibmiuseradmin",
+  "version" : "0.1.0",
+  "require" : {
+    "zf-commons/zfc-user" : "=1.2.1",
+    "zf-commons/zfc-admin" : "=v0.2.0",
+    "zendframework/zendframework" : "=2.3.2"
+  },
   "repositories" : [ {
     "type" : "composer",
     "url" : "https://packagist.org/"
