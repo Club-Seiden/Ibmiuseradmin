@@ -1,0 +1,7 @@
+{
+  "name" : "Ibmiuseradmin",
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  } ]
+}
