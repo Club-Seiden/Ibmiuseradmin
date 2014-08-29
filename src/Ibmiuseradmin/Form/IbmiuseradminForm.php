@@ -63,7 +63,7 @@ class IbmiuseradminForm extends Form
                 'label' => 'Password ',
             ),
         ));
-        $this->add(array(
+        /*$this->add(array(
             'type' => 'Zend\Form\Element\Password',
             'name' => 'password-confirm',
             'options' => array(
@@ -74,7 +74,7 @@ class IbmiuseradminForm extends Form
         $this->add(array(
             'type' => 'Zend\Form\Element\Csrf',
             'name' => 'csrf',
-        ));
+        ));*/
         $this->add(array(
             'name' => 'submit',
             'attributes' => array(
