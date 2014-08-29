@@ -24,6 +24,16 @@ class IbmiuseradminController extends AbstractActionController
         $form->get('submit')->setValue('Add');
         
         $request = $this->getRequest();
+        
+        if ($request->isPost()) {
+            $del = $request->getPost('option');
+        
+            if ($del == 'Cancel') {
+            return $this->redirect()->toRoute('ibmiuseradmin');
+            }
+        
+        }
+        
         if ($request->isPost()) {
             $user = new Ibmiuseradmin();
             $form->setInputFilter($user->getInputFilter());
@@ -42,10 +52,91 @@ class IbmiuseradminController extends AbstractActionController
     }
 
 
+    public function editAction()
+    {
+        $id = (int) $this->params()->fromRoute('user_id', 0);
+        if (! $id) {
+            return $this->redirect()->toRoute('ibmiuseradmin');
+        }
+        
+        $user = $this->getIbmiuseradminTable()->getUser($id);
+        
+        $form = new IbmiuseradminForm();
+        $form->bind($user);
+        $form->get('submit')->setAttribute('value', 'Edit');
+        
+        $request = $this->getRequest();
+        
+        if ($request->isPost()) {
+            $del = $request->getPost('option');
+        
+            if ($del == 'Cancel') {
+                return $this->redirect()->toRoute('ibmiuseradmin');
+            }
+        
+        }
+        
+        if ($request->isPost()) {
+            $form->setInputFilter($user->getInputFilter());
+            $form->setData($request->getPost());
+             
+            if ($form->isValid()) {
+                $this->getIbmiuseradminTable()->saveUser($form->getData());
+                
+                return $this->redirect()->toRoute('ibmiuseradmin');
+            }
+        }
+        
+        return array(
+            'user_id' => $id,
+            'form' => $form
+        );
+    }
 
+    public function editpasswordAction()
+    {
+        $id = (int) $this->params()->fromRoute('user_id', 0);
+        if (! $id) {
+            return $this->redirect()->toRoute('ibmiuseradmin');
+        }
+    
+        $user = $this->getIbmiuseradminTable()->getUser($id);
+    
+        $form = new IbmiuseradminForm();
+        $form->bind($user);
+        $form->get('submit')->setAttribute('value', 'Edit');
+    
+        $request = $this->getRequest();
+    
+        if ($request->isPost()) {
+            $del = $request->getPost('option');
+    
+            if ($del == 'Cancel') {
+                return $this->redirect()->toRoute('ibmiuseradmin');
+            }
+    
+        }
+    
+        if ($request->isPost()) {
+            $form->setInputFilter($user->getInputFilter());
+            $form->setData($request->getPost());
+             
+            if ($form->isValid()) {
+                $this->getIbmiuseradminTable()->saveUser($form->getData());
+    
+                return $this->redirect()->toRoute('ibmiuseradmin');
+            }
+        }
+    
+        return array(
+            'user_id' => $id,
+            'form' => $form
+        );
+    }
+    
     public function deleteAction()
     {
-        $id = (int) $this->params()->fromRoute('user_id', 0);        
+        $id = (int) $this->params()->fromRoute('user_id', 0);
         if (! $id) {
             return $this->redirect()->toRoute('ibmiuseradmin');
         }
