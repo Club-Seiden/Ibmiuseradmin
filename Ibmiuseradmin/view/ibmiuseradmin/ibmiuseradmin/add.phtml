@@ -17,9 +17,13 @@ echo $this->formRow($form->get('display_name'));
 echo '<br />';
 echo $this->formRow($form->get('email'));
 echo '<br />';
-echo $this->formRow($form->get('status'));
+echo $this->formRow($form->get('state'));
 echo '<br />';
 echo $this->formRow($form->get('password'));
 echo '<br />';
 echo $this->formSubmit($form->get('submit'));
+?> 
+<input type="submit" name="cancel" value="Cancel" />
+<?php 
 echo $this->form()->closeTag();
+?> 

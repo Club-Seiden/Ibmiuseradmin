@@ -2,6 +2,8 @@
 namespace Ibmiuseradmin\Form;
 
 use Zend\Form\Form;
+use Zend\Form\Element\Csrf;
+
 
 class IbmiuseradminForm extends Form
 {
@@ -22,7 +24,7 @@ class IbmiuseradminForm extends Form
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Username',
+                'label' => 'Username ',
             ),
         ));
         $this->add(array(
@@ -31,7 +33,7 @@ class IbmiuseradminForm extends Form
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Display Name',
+                'label' => 'Display Name ',
             ),
         ));
         $this->add(array(
@@ -40,16 +42,16 @@ class IbmiuseradminForm extends Form
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Email',
+                'label' => 'Email ',
             ),
         ));
         $this->add(array(
-            'name' => 'status',
+            'name' => 'state',
             'attributes' => array(
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Status',
+                'label' => 'State ',
             ),
         ));
         $this->add(array(
@@ -58,8 +60,20 @@ class IbmiuseradminForm extends Form
                 'type'  => 'password',
             ),
             'options' => array(
-                'label' => 'Password',
+                'label' => 'Password ',
             ),
+        ));
+        $this->add(array(
+            'type' => 'Zend\Form\Element\Password',
+            'name' => 'password-confirm',
+            'options' => array(
+                'label' => 'New Password (confirm)',
+            ), 
+        ));
+        
+        $this->add(array(
+            'type' => 'Zend\Form\Element\Csrf',
+            'name' => 'csrf',
         ));
         $this->add(array(
             'name' => 'submit',

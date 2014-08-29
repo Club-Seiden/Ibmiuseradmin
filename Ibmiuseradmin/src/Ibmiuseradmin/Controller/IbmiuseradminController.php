@@ -41,8 +41,7 @@ class IbmiuseradminController extends AbstractActionController
         );
     }
 
-    public function editAction()
-    {}
+
 
     public function deleteAction()
     {
@@ -60,7 +59,6 @@ class IbmiuseradminController extends AbstractActionController
                 $this->getIbmiuseradminTable()->deleteUser($id);
             }
             
-            // Redirect to list of albums
             return $this->redirect()->toRoute('ibmiuseradmin');
         }
         
