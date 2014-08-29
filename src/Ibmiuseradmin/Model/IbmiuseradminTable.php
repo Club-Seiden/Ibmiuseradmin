@@ -21,7 +21,7 @@ class IbmiuseradminTable
 
     public function getUser($id)
     {
-        $id  = (int) $id;
+        $id  = (int) $id; 
         $rowset = $this->tableGateway->select(array('user_id' => $id));
         $row = $rowset->current();
         if (!$row) {
@@ -35,17 +35,19 @@ class IbmiuseradminTable
         $data = array(
             'username' => $user->username,
             'display_name'  => $user->display_name,
-            'password' => $user->password,
+            'state' => $user->state,
+            'email' => $user->email,
         ); 
-        $bcrypt = new Bcrypt();       
-        $securePass = $bcrypt->create($data['password']);
-        $data['password'] = $securePass;
-    
+        $bcrypt = new Bcrypt();
+        $bcrypt->setCost(14); 
+        $securepass = $bcrypt->create($user->password);
+        $data['password'] = $securepass;
+        
         $id = (int)$user->user_id;
         if ($id == 0) {
             $this->tableGateway->insert($data);
-        } else {
-            if ($this->getIbmiuseradmin($id)) {
+        } else {            
+            if ($this->getUser($id)) {
                 $this->tableGateway->update($data, array('user_id' => $id));
             } else {
                 throw new \Exception('Form id does not exist');
