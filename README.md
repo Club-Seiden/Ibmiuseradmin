@@ -30,13 +30,10 @@ Requirements
 Features / Goals
 ----------------
 
-* Authenticate via username, email, or both (can opt out of the concept of
-  username and use strictly email) [COMPLETE]
-* User registration [COMPLETE]
-* Forms protected against CSRF [COMPLETE]
-* Out-of-the-box support for Doctrine2 _and_ Zend\Db [COMPLETE]
-* Registration form protected with CAPTCHA [IN PROGRESS] \(Needs more options\)
-* Robust event system to allow for extending [IN PROGRESS]
+* Allow an admin to add, edit user details, change password, and delete users [IN PROGRESS]
+* Commented every piece as a learning tool [IN PROGRESS]
+* Be a sub-route of ZFCAdmin [IN PROGRESS]
+
 
 Installation
 ------------
@@ -47,6 +44,10 @@ Installation
 
 1. Install the [ZfcBase](https://github.com/ZF-Commons/ZfcBase) ZF2 module
    by cloning it into `./vendor/`.
-2. Clone this project into your `./vendor/` directory.
+2. Install the [ZfcUser](https://github.com/ZF-Commons/ZfcUser) ZF2 module
+   by cloning it into `./vendor/`.
+3. Install the [ZfcAdmin](https://github.com/ZF-Commons/ZfcAdmin) ZF2 module
+   by cloning it into `./vendor/`.
+4. Clone this project into your `./vendor/` directory.
 
 
