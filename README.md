@@ -1,7 +1,7 @@
 Ibmiuseradmin
 =============
 
-This is a simple yet functional way to edit users in ZFCUser on IBM i. It is meant to be used with ZFCAdmin. In theory this work on any system.  
+This is a simple yet functional way to edit users in ZFCUser on IBM i. It is meant to be used with ZFCAdmin. In theory this work on any OS, not just IBM i.  
 
 Created by the fine people over at theiforums.com
 
