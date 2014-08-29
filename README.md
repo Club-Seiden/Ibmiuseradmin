@@ -38,9 +38,6 @@ Features / Goals
 Installation
 ------------
 
-### Main Setup
-
-#### By cloning project
 
 1. Install the [ZfcBase](https://github.com/ZF-Commons/ZfcBase) ZF2 module
    by cloning it into `./vendor/`.
