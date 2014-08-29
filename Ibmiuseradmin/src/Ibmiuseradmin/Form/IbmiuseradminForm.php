@@ -55,7 +55,7 @@ class IbmiuseradminForm extends Form
         $this->add(array(
             'name' => 'password',
             'attributes' => array(
-                'type'  => 'text',
+                'type'  => 'password',
             ),
             'options' => array(
                 'label' => 'Password',
