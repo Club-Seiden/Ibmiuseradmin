@@ -41,7 +41,7 @@ class IbmiuseradminController extends AbstractActionController
             
             if ($form->isValid()) {
                 $user->exchangeArray($form->getData());
-                $this->getIbmiuseradminTable()->saveUser($user);
+                $this->getIbmiuseradminTable()->saveUser($user, true);
                 
                 return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }
@@ -81,7 +81,7 @@ class IbmiuseradminController extends AbstractActionController
             $form->setData($request->getPost());
              
             if ($form->isValid()) {
-                $this->getIbmiuseradminTable()->saveUser($form->getData());
+                $this->getIbmiuseradminTable()->saveUser($form->getData(), false);
                 
                 return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }
@@ -122,7 +122,7 @@ class IbmiuseradminController extends AbstractActionController
             $form->setData($request->getPost());
              
             if ($form->isValid()) {
-                $this->getIbmiuseradminTable()->saveUser($form->getData());
+                $this->getIbmiuseradminTable()->saveUser($form->getData(), true);
     
                 return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }

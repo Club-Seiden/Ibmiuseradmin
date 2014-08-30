@@ -18,6 +18,7 @@ $form->prepare();
 
 echo $this->form()->openTag($form);
 echo $this->formHidden($form->get('user_id'));
+echo $this->formHidden($form->get('password'));
 echo $this->formRow($form->get('username'));
 echo '<br />';
 echo $this->formRow($form->get('display_name'));
