@@ -1,6 +1,6 @@
 <p>
     <h2>IBM i User Admin</h2>
-    <a href="<?php echo $this->url('ibmiuseradmin', array('action'=>'add'));?>">Add New User</a>
+    <a href="<?php echo $this->url('zfcadmin/ibmiuseradmin', array('action'=>'add'));?>">Add New User</a>
 </p>
 
 <table class="table">
@@ -20,11 +20,11 @@
     <td><?php echo $this->escapeHtml($user->email);?></td>
         <td><?php echo $this->escapeHtml($user->state);?></td>
         <td>
-        <a href="<?php echo $this->url('ibmiuseradmin',
+        <a href="<?php echo $this->url('zfcadmin/ibmiuseradmin',
             array('action'=>'edit', 'user_id' => $user->user_id));?>">Edit </a>-
-        <a href="<?php echo $this->url('ibmiuseradmin',
+        <a href="<?php echo $this->url('zfcadmin/ibmiuseradmin',
             array('action'=>'editpassword', 'user_id' => $user->user_id));?>">Change Password </a>- 
-        <a href="<?php echo $this->url('ibmiuseradmin',
+        <a href="<?php echo $this->url('zfcadmin/ibmiuseradmin',
             array('action'=>'delete', 'user_id' => $user->user_id));?>"> Delete</a>
     </td>
      
