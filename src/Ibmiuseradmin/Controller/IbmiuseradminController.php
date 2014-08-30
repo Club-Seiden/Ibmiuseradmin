@@ -29,7 +29,7 @@ class IbmiuseradminController extends AbstractActionController
             $del = $request->getPost('option');
         
             if ($del == 'Cancel') {
-            return $this->redirect()->toRoute('ibmiuseradmin');
+            return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }
         
         }
@@ -43,7 +43,7 @@ class IbmiuseradminController extends AbstractActionController
                 $user->exchangeArray($form->getData());
                 $this->getIbmiuseradminTable()->saveUser($user);
                 
-                return $this->redirect()->toRoute('ibmiuseradmin');
+                return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }
         }
         return array(
@@ -56,7 +56,7 @@ class IbmiuseradminController extends AbstractActionController
     {
         $id = (int) $this->params()->fromRoute('user_id', 0);
         if (! $id) {
-            return $this->redirect()->toRoute('ibmiuseradmin');
+            return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
         }
         
         $user = $this->getIbmiuseradminTable()->getUser($id);
@@ -71,7 +71,7 @@ class IbmiuseradminController extends AbstractActionController
             $del = $request->getPost('option');
         
             if ($del == 'Cancel') {
-                return $this->redirect()->toRoute('ibmiuseradmin');
+                return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }
         
         }
@@ -83,7 +83,7 @@ class IbmiuseradminController extends AbstractActionController
             if ($form->isValid()) {
                 $this->getIbmiuseradminTable()->saveUser($form->getData());
                 
-                return $this->redirect()->toRoute('ibmiuseradmin');
+                return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }
         }
         
@@ -97,7 +97,7 @@ class IbmiuseradminController extends AbstractActionController
     {
         $id = (int) $this->params()->fromRoute('user_id', 0);
         if (! $id) {
-            return $this->redirect()->toRoute('ibmiuseradmin');
+            return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
         }
     
         $user = $this->getIbmiuseradminTable()->getUser($id);
@@ -112,7 +112,7 @@ class IbmiuseradminController extends AbstractActionController
             $del = $request->getPost('option');
     
             if ($del == 'Cancel') {
-                return $this->redirect()->toRoute('ibmiuseradmin');
+                return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }
     
         }
@@ -124,7 +124,7 @@ class IbmiuseradminController extends AbstractActionController
             if ($form->isValid()) {
                 $this->getIbmiuseradminTable()->saveUser($form->getData());
     
-                return $this->redirect()->toRoute('ibmiuseradmin');
+                return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
             }
         }
     
@@ -138,7 +138,7 @@ class IbmiuseradminController extends AbstractActionController
     {
         $id = (int) $this->params()->fromRoute('user_id', 0);
         if (! $id) {
-            return $this->redirect()->toRoute('ibmiuseradmin');
+            return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
         }
         
         $request = $this->getRequest();
@@ -150,7 +150,7 @@ class IbmiuseradminController extends AbstractActionController
                 $this->getIbmiuseradminTable()->deleteUser($id);
             }
             
-            return $this->redirect()->toRoute('ibmiuseradmin');
+            return $this->redirect()->toRoute('zfcadmin/ibmiuseradmin');
         }
         
         return array(

@@ -21,7 +21,7 @@ Features / Goals
 
 * Allow an admin to add, edit user details, change password, and delete users [IN PROGRESS]
 * Commented all code so this can be used as a learning tool [IN PROGRESS]
-* Be a sub-route of ZFCAdmin [IN PROGRESS]
+* Be a sub-route of ZFCAdmin [COMPLETE]
 
 
 Installation
