@@ -28,5 +28,13 @@ Installation
 ------------
 
 
-1. Clone this repository by running 'git clone https://github.com/Club-Seiden/Ibmiuseradmin.git'
-2. Install dependencies with 'composer install'
+1. Add this package with Composer  
+```
+..."require-dev":{
+    "club-seiden/ibmiuseradmin":"dev-master"
+    },...
+```  
+2. Tell Composer to download Ibmiuseradmin  
+```
+$ php composer.phar update
+```
