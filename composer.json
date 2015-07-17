@@ -1,6 +1,34 @@
 {
-  "name" : "club-seiden/ibmiuseradmin",
+  "name": "club-seiden/ibmiuseradmin",
+  "description": "A user management module for ZF2",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "ibmi",
+    "zf2",
+    "user",
+    "admin"
+  ],
+  "homepage": "https://github.com/Club-Seiden/Ibmiuseradmin",
+  "authors":[
+    {
+      "name": "Chuk Shirley",
+      "email": "chukShirley@gmail.com"
+    },
+    {
+      "name": "King Harrison",
+      "email": "kingharrison@gmail.com"
+    }
+  ],
   "version" : "0.1.0",
+  "autoload": {
+    "psr-0": {
+      "IbmiUserAdmin": "src/"
+    },
+    "classmap": [
+      "./Module.php"
+    ]
+  },
   "require" : {
     "zf-commons/zfc-user" : "=1.2.1",
     "zf-commons/zfc-admin" : "=v0.2.0",
