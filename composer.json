@@ -30,9 +30,9 @@
     ]
   },
   "require" : {
-    "zf-commons/zfc-user" : "=1.2.1",
-    "zf-commons/zfc-admin" : "=v0.2.0",
-    "zendframework/zendframework" : "=2.3.2"
+    "zf-commons/zfc-user" : "=1.2.2",
+    "zf-commons/zfc-admin" : "=v0.2.1",
+    "zendframework/zendframework" : "~2.4"
   },
   "repositories" : [ {
     "type" : "composer",
