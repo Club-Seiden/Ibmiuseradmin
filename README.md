@@ -1,9 +1,9 @@
 Ibmiuseradmin
 =============
 
-This is a simple yet functional way to edit users in ZFCUser on IBM i. It is meant to be used with ZFCAdmin. In theory this work on any OS, not just IBM i.  
+This is a simple yet functional way to manage users in your ZF2 projects running on IBM i. It is meant to be used with ZFCAdmin. In theory this work on any OS, not just IBM i, but details regarding DB2 connections are provided in the /data directory.  
 
-Created by the fine people over at theiforums.com
+Created by the fine people over at clubseiden.com
 
 
 Requirements
@@ -28,12 +28,5 @@ Installation
 ------------
 
 
-1. Install the [ZfcBase](https://github.com/ZF-Commons/ZfcBase) ZF2 module
-   by cloning it into `./vendor/`.
-2. Install the [ZfcUser](https://github.com/ZF-Commons/ZfcUser) ZF2 module
-   by cloning it into `./vendor/`.
-3. Install the [ZfcAdmin](https://github.com/ZF-Commons/ZfcAdmin) ZF2 module
-   by cloning it into `./vendor/`.
-4. Clone this project into your `./vendor/` directory.
-
-
+1. Clone this repository by running 'git clone https://github.com/Club-Seiden/Ibmiuseradmin.git'
+2. Install dependencies with 'composer install'
