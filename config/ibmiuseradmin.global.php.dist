@@ -1,0 +1,24 @@
+<?php
+/**
+ * IBM i User Admin Configuration
+ *
+ * If you have a ./config/autoload/ directory set up for your project, you can
+ * drop this config file in it and change the values as you wish.
+ */
+$settings = array(
+
+    'zend_db_adapter' => 'Zend\Db\Adapter\Adapter',
+
+);
+
+/**
+ * You do not need to edit below this line
+ */
+return array(
+    'ibmiuseradmin' => $settings,
+    'service_manager' => array(
+        'aliases' => array(
+            'ibmiuseradmin_zend_db_adapter' => (isset($settings['zend_db_adapter'])) ? $settings['zend_db_adapter']: 'Zend\Db\Adapter\Adapter',
+        ),
+    ),
+);
