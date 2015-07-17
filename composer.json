@@ -1,5 +1,5 @@
 {
-  "name" : "theiforums/ibmiuseradmin",
+  "name" : "club-seiden/ibmiuseradmin",
   "version" : "0.1.0",
   "require" : {
     "zf-commons/zfc-user" : "=1.2.1",
